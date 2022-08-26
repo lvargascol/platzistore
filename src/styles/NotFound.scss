@@ -1,0 +1,21 @@
+@import 'vars';
+
+
+.Default-Container
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.Default-Container p
+{
+    font-size: var(--md);
+    text-align: center;
+}
+.Default-Container span
+{
+    font-size: 32px;
+    font-weight: bold;
+}
