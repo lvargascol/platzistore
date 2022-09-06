@@ -8,7 +8,7 @@ const CreateAccount = () => {
         <h1 className="title">My account</h1>
         <form action="/" className="form">
           <div>
-            <label for="name" className="label">
+            <label htmlFor="name" className="label">
               Name
             </label>
             <input
@@ -18,7 +18,7 @@ const CreateAccount = () => {
               placeholder="Your name"
             />
 
-            <label for="email" className="label">
+            <label htmlFor="email" className="label">
               Email
             </label>
             <input
@@ -28,7 +28,7 @@ const CreateAccount = () => {
               placeholder="email@example.com"
             />
 
-            <label for="password" className="label">
+            <label htmlFor="password" className="label">
               Password
             </label>
             <input

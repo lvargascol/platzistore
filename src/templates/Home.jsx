@@ -7,7 +7,6 @@ import ShoppingCart from '../containers/ShoppingCart';
 const Home = () => {
   return (
     <div>
-      <Header />
       <ProductList />
       {/* <ProductDetail /> */}
     </div>

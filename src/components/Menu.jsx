@@ -1,30 +1,31 @@
 import React, {useContext} from 'react';
-import '@styles/Menu.scss';
+import Link from 'next/link';
 import AppContext from '@context/AppContext';
+import styles from '@styles/Menu.module.scss';
 
 const Menu = () => {
   const {state} = useContext(AppContext);
   let classMenu;
 
   if(state.toggleOrders) {
-    classMenu = "menu displayedOrders";
+    classMenu = `${styles['menu']} ${styles['displayedOrders']}`;
   } else {
-    classMenu = "menu";
+    classMenu = styles['menu'];
   };
-
+  
   return (
     <div className={classMenu} >
       <ul>
         <li>
-          <a href="/" className="menu-title">
+          <Link href="/orders" className={styles['menu-title']}>
             My orders
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="/">My account</a>
+          <Link href="/account">My account</Link>
         </li>
         <li>
-          <a href="/">Sign out</a>
+          <Link href="/">Sign out</Link>
         </li>
       </ul>
     </div>

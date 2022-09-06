@@ -1,6 +1,8 @@
 import React, { useContext } from 'react';
+import Image from 'next/image';
 import AppContext from '@context/AppContext';
 import addToCartIcon from '@icons/bt_add_to_cart.svg';
+import styles from '@styles/ProductList.module.scss';
 
 const ProductItem = ({product}) => {
   const {addToCart} = useContext(AppContext);
@@ -10,18 +12,22 @@ const ProductItem = ({product}) => {
   };
 
   return (
-    <div className="product-card">
-      <img
+    <div className={styles['product-card']}>
+      <Image
+        loader={() => product.images[0]}
         src={product.images[0]}
         alt={product.title}
+        width="100%"
+        height="100%"
+        layout="responsive"
       />
-      <div className="product-item">
+      <div className={styles['product-item']}>
         <div>
           <p>${product.price}</p>
           <p>{product.title}</p>
         </div>
         <figure onClick={() => handleClick(product)}>
-          <img src={addToCartIcon} alt="add-to-card" />
+          <Image src={addToCartIcon} alt="add-to-card" />
         </figure>
       </div>
     </div>

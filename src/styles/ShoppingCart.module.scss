@@ -6,11 +6,11 @@
     padding: 24px;
     position: absolute;
     right: 0;
-    background-color: var(--white);
+    background-color: $--white;
     top: 60px;
     bottom: 0;
     border-radius: 4px;
-    border: 1px solid var(--very-light-pink);
+    border: 1px solid $--very-light-pink;
     z-index: 1;
     max-height: 100vh;
 }
@@ -27,13 +27,13 @@
     margin-bottom: 12px;
 }
 
-.shopping-cart-title-container img {
+.arrowIcon {
     transform: rotate(180deg);
     margin-right: 12px;
 }
 
 .shopping-cart-title {
-    font-size: var(--lg);
+    font-size: $--lg;
     font-weight: bold;
 }
 
@@ -51,18 +51,18 @@
 }
 
 .order-content::-webkit-scrollbar-track {
-    background: var(--white);
+    background: $--white;
 
 }
 
 .order-content::-webkit-scrollbar-thumb {
-    background: var(--very-light-pink);
-    border: 1px solid var(--white);
+    background: $--very-light-pink;
+    border: 1px solid $--white;
 }
 
 
 .order-content::-webkit-scrollbar-thumb:hover {
-    background: var(--very-light-pink);
+    background: $--very-light-pink;
     border-color: transparent;
 }
 
@@ -81,7 +81,7 @@
     margin: 0;
 }
 
-.shopping-cart figure img {
+.product-image {
     width: 72px;
     height: 72px;
     border-radius: 12px;
@@ -89,20 +89,20 @@
 }
 
 .shopping-cart p:nth-child(2) {
-    color: var(--very-light-pink);
-    font-size: var(--md);
+    color: $--very-light-pink;
+    font-size: $--md;
     font-weight: 500;
 }
 
 .shopping-cart p:nth-child(3) {
-    font-size: var(--md);
+    font-size: $--md;
     font-weight: bold;
 }
 
 .order-total {
     display: grid;
     grid-template-columns: auto 1fr;
-    background-color: var(--text-input-field);
+    background-color: $--text-input-field;
     gap: 16px;
     align-items: center;
     margin: 12px 0;
@@ -116,18 +116,18 @@
 }
 
 .order-total p span:nth-child(1) {
-    font-size: var(--md);
+    font-size: $--md;
     font-weight: bold;
 }
 
 .order-total p:nth-child(2) {
     text-align: end;
-    font-size: var(--md);
+    font-size: $--md;
     font-weight: bold;
 }
 
 .primary-button {
-    background-color: var(--hospital-green);
+    background-color: $--hospital-green;
     border-radius: 8px;
     border: none;
     color: var(--white);

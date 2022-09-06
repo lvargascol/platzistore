@@ -5,18 +5,18 @@
     padding: 24px;
     width: auto;
     height: 100vh;
-    border: 1px solid var(--very-light-pink);
+    border: 1px solid $--very-light-pink;
     border-radius: 4px;
     position: absolute;
     left: 0;
     top: 60px;
-    background-color: var(--white);
+    background-color: $--white;
     display: none;
     grid-template-rows: 1fr 1fr auto;
 }   
 .mobile-menu ul:nth-child(1)
 {
-    border-bottom: 1px solid var(--very-light-pink);
+    border-bottom: 1px solid $--very-light-pink;
 }
 .mobile-menu ul
 {
@@ -35,19 +35,19 @@
 .mobile-menu ul li a
 {
     text-decoration: none;
-    color: var(--black);
-    font-size: var(--md);
+    color: $--black;
+    font-size: $--md;
     font-weight: bold;
 }
 .mobile-menu .email
 {
-    font-size: var(--sm);
+    font-size: $--sm;
     font-weight: 300;
 }
 .mobile-menu .sign-out
 {
-    color: var(--hospital-green);
-    font-size: var(--sm);
+    color: $--hospital-green;
+    font-size: $--sm;
 }
 
 @media (max-width: 640px) {

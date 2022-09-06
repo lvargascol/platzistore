@@ -1,5 +1,6 @@
 import React, { useState, useContext } from 'react';
-import '@styles/Header.scss';
+import Link from 'next/link';
+import Image from 'next/image';
 import Menu from '@components/Menu';
 import ShoppingCart from '@containers/ShoppingCart';
 import logo from '@logos/logo_yard_sale.svg';
@@ -7,6 +8,7 @@ import menuIcon from '@icons/icon_menu.svg';
 import shoppingCartIcon from '@icons/icon_shopping_cart.svg';
 import MobileMenu from '@components/MobileMenu';
 import AppContext from '@context/AppContext';
+import styles from '@styles/Header.module.scss';
 
 const Header = () => {
   const [toggle, setToggle] = useState(false);
@@ -21,45 +23,51 @@ const Header = () => {
   };
 
   return (
-    <nav>
-      <img src={menuIcon} alt="menu" className="menu-icon" onClick={handleToggle}/>
-      <div className="navbar-left">
-        <img src={logo} alt="logo" className="nav-logo" />
+    <nav className={styles.Nav}>
+      <div className={styles['menu-icon']}>
+        <Image src={menuIcon} alt="menu" onClick={handleToggle} />
+      </div>
+      <div className={styles['navbar-left']}>
+        <div className={styles['nav-logo']}>
+          <Link href="/">
+            <Image src={logo} alt="logo" />
+          </Link>
+        </div>
         <ul>
           <li>
-            <a href="/">All</a>
+            <Link href="/">All</Link>
           </li>
           <li>
-            <a href="/">Clothes</a>
+            <Link href="/">Clothes</Link>
           </li>
           <li>
-            <a href="/">Electronics</a>
+            <Link href="/">Electronics</Link>
           </li>
           <li>
-            <a href="/">Furnitures</a>
+            <Link href="/">Furnitures</Link>
           </li>
           <li>
-            <a href="/">Toys</a>
+            <Link href="/">Toys</Link>
           </li>
           <li>
-            <a href="/">Others</a>
+            <Link href="/">Others</Link>
           </li>
         </ul>
       </div>
-      <div className="navbar-right">
+      <div className={styles['navbar-right']}>
         <ul>
-          <li className="navbar-email" onClick={handleToggle}>
+          <li className={styles['navbar-email']} onClick={handleToggle}>
             mail@example.com
           </li>
-          <li className="navbar-shopping-cart" onClick={() => handleToggleOrders()}>
-            <img src={shoppingCartIcon} alt="shopping cart" />
+          <li className={styles['navbar-shopping-cart']} onClick={() => handleToggleOrders()}>
+            <Image src={shoppingCartIcon} alt="shopping cart" />
             {state.cart.length > 0 ? <div>{state.cart.length}</div> : null}
           </li>
         </ul>
       </div>
-      {toggle && <MobileMenu/>}  
-      {toggle && <Menu/>}     
-      {state.toggleOrders && <ShoppingCart/>} 
+      {toggle && <MobileMenu />}
+      {toggle && <Menu />}
+      {state.toggleOrders && <ShoppingCart />}
     </nav>
   );
 };

@@ -3,13 +3,13 @@
 .menu {
     width: auto;
     height: auto;
-    border: 1px solid var(--very-light-pink);
+    border: 1px solid $--very-light-pink;
     border-radius: 4px;
     padding: 20px;
     position: absolute;
     right: 56px;
     top: 60px;
-    background-color: var(--white);
+    background-color: $--white;
 }
 
 .displayedOrders {
@@ -29,22 +29,22 @@
 
 .menu ul li:last-child {
     padding-top: 20px;
-    border-top: 1px solid var(--very-light-pink);
+    border-top: 1px solid $--very-light-pink;
 }
 
 .menu ul li a {
     display: inline-block;
     text-decoration: none;
-    color: var(--black);
-    font-size: var(--md);
+    color: $--black;
+    font-size: $--md;
     font-weight: bold;
     margin-bottom: 20px;
     white-space: nowrap;
 }
 
 .menu ul li:last-child a {
-    color: var(--hospital-green);
-    font-size: var(--sm);
+    color: $--hospital-green;
+    font-size: $--sm;
     font-weight: 500;
     margin-bottom: 0;
 }
