@@ -7,13 +7,8 @@ import AppContext from '@context/AppContext';
 import styles from '@styles/ShoppingCart.module.scss';
 
 const ShoppingCart = () => {
-  const { state, setToggleOrders } = useContext(AppContext);
+  const { state, setToggleOrders ,sumTotal } = useContext(AppContext);
 
-  const sumTotal = () => {
-    const reducer = (accumulator, currentValue) => accumulator + currentValue.price;
-    const sum = state.cart.reduce(reducer, 0);
-    return sum;
-  };
 
   const handleToggleOrders = () => {
     setToggleOrders();
